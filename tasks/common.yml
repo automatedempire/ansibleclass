@@ -4,3 +4,22 @@
   apt:
     update-cache: true
     upgrade: true
+
+- name: "Install common utilities"
+  apt:
+    state: present
+    name:
+    - vim
+    - dos2unix
+
+- name: "Install pip"
+  apt: name=python-pip state=present
+
+- name: "Remove unneeded components"
+  apt:
+    state: absent
+    name: "{{ item }}"
+  with_items:
+    - bluetooth
+    - adobe-flashplugin
+
