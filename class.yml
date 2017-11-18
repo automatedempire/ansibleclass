@@ -6,3 +6,10 @@
   become_method: sudo
   roles:
    - common
+
+- name: "Configure the web servers"
+  hosts: webserver
+  become: true
+  become_method: sudo
+  roles:
+   - webserver
