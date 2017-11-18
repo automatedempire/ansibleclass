@@ -4,5 +4,5 @@
   hosts: all
   become: true
   become_method: sudo
-  tasks:
-   - include: tasks/common.yml
+  roles:
+   - common
