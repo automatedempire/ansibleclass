@@ -1,0 +1,6 @@
+---
+
+- name: "(Security) Allow traffic to the webservers through the firewall"
+  ufw:
+   rule: allow
+   app: "Apache Full"

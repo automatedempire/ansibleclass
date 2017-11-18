@@ -1,0 +1,6 @@
+---
+
+- name: "(App) Copy simple website to the web servers"
+  copy:
+   src: states.php
+   dest: /var/www/html

@@ -1,0 +1,16 @@
+---
+
+- name: Install apache and PHP
+  apt:
+   state: present
+   name:
+    - apache2
+    - php
+    - libapache2-mod-php
+    - php-mcrypt
+    - php-mysql
+
+- name: Restart apache to pick up the changes
+  systemd:
+   name: apache2
+   state: restarted
