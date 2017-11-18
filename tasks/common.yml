@@ -1,0 +1,6 @@
+---
+
+- name: "Update systems"
+  apt:
+    update-cache: true
+    upgrade: true
